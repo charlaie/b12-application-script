@@ -2,10 +2,16 @@ name: B12 submission
 
 on:
   workflow_dispatch:
+    inputs:
+      target_env:
+        description: "Select GitHub Environment"
+        required: true
+        type: environment
 
 jobs:
   submit:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.target_env }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
