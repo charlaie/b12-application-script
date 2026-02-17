@@ -81,7 +81,7 @@ def main():
         data=payload_bytes,
         headers={
             "Content-Type": "application/json",
-            "X-Signature-256": f"sha-256={hex_digest}",
+            "X-Signature-256": f"sha256={hex_digest}",
         },
         timeout=30,
     )
