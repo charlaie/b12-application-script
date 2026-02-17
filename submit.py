@@ -59,6 +59,8 @@ def main():
 
     repository_link = f"{gh_server}/{gh_repo}"
     action_run_link = f"{gh_server}/{gh_repo}/actions/runs/{gh_run_id}"
+    print(f"repo link: {repository_link}")
+    print(f"action run link: {action_run_link}")
 
     # Construct payload and calculate hmac
     payload = {
